@@ -38,7 +38,12 @@
     }
   },
   "peers": {
+<<<<<<< HEAD
     "minimumNetworkReach": 1,
+=======
+    "queryReach": 20,
+    "minimumNetworkReach": 20,
+>>>>>>> Added queryReach to config, fixed comparison to string, sort peers by delay for querying.
     "list": [
       {
         "ip": "texplorer.phantom.org",
