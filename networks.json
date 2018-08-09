@@ -53,10 +53,9 @@
       "symbol":"DѦ",
       "explorer":"http://dexplorer.ark.io"
     }
-  }
-},
-  "phantom": {
-    "messagePrefix": "PHANTOM message:\n",
+  },
+  "phantomTestnet": {
+    "messagePrefix": "PHANTOM Testnet message:\n",
     "bip32": {
       "public": 70617039,
       "private": 70615956
@@ -64,9 +63,9 @@
     "pubKeyHash": 43,
     "wif": 187,
     "client": {
-      "token":"ZINC",
-      "symbol":"Ẕ",
-      "explorer":"https://explorer.phantom.org"
+      "token":"XPT",
+      "symbol":"XѦ",
+      "explorer":"https://texplorer.phantom.org"
     }
   }
 }

@@ -16,3 +16,6 @@ config.main.json
 genesisBlock.main.json
 .vagrant
 private/
+config.phantomTestnet.autoforging.json
+config.phantomTestnet.json
+genesisBlock.phantomTestnet.json
