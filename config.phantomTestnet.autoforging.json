@@ -1,0 +1,149 @@
+{
+  "port": 4150,
+  "address": "0.0.0.0",
+  "version": "0.0.1",
+  "fileLogLevel": "info",
+  "logFileName": "logs/ark.log",
+  "consoleLogLevel": "debug",
+  "trustProxy": false,
+  "db": {
+    "host": "phntm.ccyjhqamfwya.us-east-2.rds.amazonaws.com",
+    "port": 5432,
+    "database": "phantom_testnet",
+    "user": "phntm",
+    "password": "F2csrc986",
+    "poolSize": 20,
+    "poolIdleTimeout": 30000,
+    "reapIntervalMillis": 1000,
+    "logEvents": [
+      "error"
+    ]
+  },
+  "api": {
+    "mount": true,
+    "access": {
+      "whiteList": []
+    },
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      }
+    }
+  },
+  "peers": {
+    "minimumNetworkReach": 1,
+    "list": [
+      {
+        "ip": "127.0.0.1",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.2",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.3",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.5",
+        "port": 4100
+      }
+    ],
+    "blackList": [],
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      },
+      "maxUpdatePeers": 20,
+      "timeout": 5000
+    }
+  },
+  "forging": {
+    "coldstart": 6,
+    "force": true,
+    "secret": [
+      "swamp enroll busy speak topple trick success man urge dilemma stairs noble",
+      "couple radio until talent cannon defense affair champion pepper month thing minor",
+      "torch wrestle food enough valve window advance sunny suggest disease evidence govern",
+      "crack fee yard glue goddess age bridge rain rough obvious blind post",
+      "grant mosquito where alarm science traffic blur conduct mistake used regret rose",
+      "unit inject loop token bike power behave front reduce announce fee speed",
+      "mountain rent mandate need black reduce lottery firm slush beach actor hedgehog",
+      "sketch cabbage pledge rebuild actual burst wine feature found lazy boat pelican",
+      "family sea skirt inmate real share bronze man film enable tilt enable",
+      "image teach office cruise shock news program indoor egg exact medal blade",
+      "organ shove wrong world climb battle own mandate moon vast wagon fog",
+      "better destroy journey sausage cattle raccoon gossip select utility celery envelope lounge",
+      "grocery mail vacuum lobster cat various chat basic loop poverty woman jump",
+      "mandate vendor duty magnet leaf error rule license smooth elevator bottom paddle",
+      "hammer black soccer derive yard square trip elbow silent stool gentle innocent",
+      "axis female vicious assume typical credit nation crater column rude electric one",
+      "social misery gossip enjoy cable very perfect renew run find gown banana",
+      "entire wife usage coin spoil script sunny ask code execute sad envelope",
+      "indoor wasp job sweet pond dune brass skin theory derive camera right",
+      "table crush gadget mosquito impose rally green left ivory absurd ozone creek",
+      "also solution second friend found smooth again stadium pizza brand weather pitch",
+      "draw thunder camera carpet bring tattoo craft fabric that equal just disagree",
+      "about annual soldier pencil sudden oyster add sunset venue silly tail day",
+      "enjoy sleep ramp surround lawsuit orbit onion siege episode trick group add",
+      "two cactus hand turn guilt cabin grief myth demise pond exhibit token",
+      "napkin stadium glass bless dove imitate shrimp car release noble puppy nasty",
+      "subject swing combine series primary network confirm during brief cash brush stand",
+      "census upper gun detect giant quote dirt private front borrow sunny share",
+      "soup below chalk foil jump trophy crane caught step puppy pig rail",
+      "ribbon opera split differ liar web minute excuse become space enhance round",
+      "mistake fine quick length tree axis squeeze ecology turtle corn execute stone",
+      "treat timber funny sadness multiply pigeon hockey later unique fabric fluid box",
+      "kind drink mesh heavy lecture thing brisk marriage donor coffee habit rifle",
+      "gasp used space omit engine disorder luxury fork state tennis front drill",
+      "bracket method test avoid acquire flock bean rude wagon credit craft bar",
+      "include left piece brick prevent athlete scare clean cook chronic stamp jewel",
+      "abuse lizard three spend start tool direct vivid soap staff heavy assume",
+      "fiber region omit erosion merge shoe scissors elevator notable program awful drip",
+      "enlist delay swear knock beef rapid lesson tilt concert toy easy employ",
+      "bargain valve purpose truly upon food major joke address winner april caution",
+      "danger merge midnight chunk bulb gravity brush adapt assume reward age actor",
+      "scene just snake pride noodle outside media clerk require cake tiger equal",
+      "best tail office cat turtle horn clap raven ready glare blur such",
+      "tomorrow night toss verify grunt siren state effort ketchup all brass badge",
+      "ramp lobster lunar general company bleak borrow frog clay cotton blast cradle",
+      "orphan cycle affair family degree ship drama yellow pink pond dinner spare",
+      "relief bird call knee obey announce large brown street guide solid front",
+      "notice tail smile define expand state melody place elbow ticket ecology rough",
+      "hen audit receive member loyal bright cliff flee rough clever laundry daring",
+      "just street normal market rain dinosaur enable busy stay sudden stable online",
+      "sunset polar lucky vital cigar trade equip moment keen bomb grit shallow"
+    ],
+    "access": {
+      "whiteList": [
+        "127.0.0.1"
+      ]
+    }
+  },
+  "loading": {
+    "verifyOnLoading": false,
+    "loadPerIteration": 5000
+  },
+  "ssl": {
+    "enabled": false,
+    "options": {
+      "port": 443,
+      "address": "0.0.0.0",
+      "key": "./ssl/ark.key",
+      "cert": "./ssl/ark.crt"
+    }
+  },
+  "network": "phantomTestnet",
+  "nethash": "2645ec0a3ab59299964c8d038eb1a295be4dc46278863330a2480de40c2d458b"
+}
