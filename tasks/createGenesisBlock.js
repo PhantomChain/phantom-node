@@ -49,7 +49,7 @@ var seed_peers = [
 ];
 
 // default db named
-var db_name = "phantom_" + network_name;
+var db_name = "phantom_testnet";
 
 // optional premined accounts. Example :
 // [
@@ -66,7 +66,7 @@ else {
 }
 
 // Total of premined token in satoshi. The premined accounts will be substracted to this
-var totalpremine = 2100000000000000;
+var totalpremine = 107041048800000000;
 
 
 // config file that will be tuned and exported
@@ -79,11 +79,11 @@ var config = {
     consoleLogLevel: "debug",
     trustProxy: false,
     db: {
-        host: "localhost",
+        host: "phntm.ccyjhqamfwya.us-east-2.rds.amazonaws.com",
         port: 5432,
         database: db_name,
-        user: null,
-        password: "password",
+        user: "phntm",
+        password: "F2csrc986",
         poolSize: 20,
         poolIdleTimeout: 30000,
         reapIntervalMillis: 1000,
@@ -135,12 +135,12 @@ var config = {
         loadPerIteration: 5000
     },
     ssl: {
-        enabled: false,
+        enabled: true,
         options: {
-            port: 443,
+            port: 4200,
             address: "0.0.0.0",
-            key: "./ssl/ark.key",
-            cert: "./ssl/ark.crt"
+            key: "/var/node/ssl/wildcard.phantom.org.key",
+            cert: "/var/node/ssl/wildcard.phantom.org.crt"
         }
     },
     network: network_name
@@ -238,8 +238,8 @@ create = function (data) {
 
 	var nextHeight = 1;
 
-	var reward = 0,
-	    totalFee = 0, totalAmount = 0, size = 0;
+	var reward = 3,
+	    totalFee = 0.1, totalAmount = 0, size = 0;
 
 	var blockTransactions = [];
 	var payloadHash = crypto.createHash('sha256');

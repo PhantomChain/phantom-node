@@ -54,7 +54,7 @@ __private.attachApi = function () {
 		});
 	}
 
-	if (process.env.TOP && process.env.TOP.toUpperCase() === 'TRUE') {
+//	if (process.env.TOP && process.env.TOP.toUpperCase() === 'TRUE') {
 		router.get('/top', function (req, res, next) {
 			req.sanitize(req.query, schema.top, function (err, report, query) {
 				if (err) { return next(err); }
@@ -83,7 +83,7 @@ __private.attachApi = function () {
 				});
 			});
 		});
-	}
+//	}
 
 	router.get('/count', function (req, res) {
 		return res.json({success: true, count: Object.keys(__private.accounts).length});

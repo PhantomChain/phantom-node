@@ -60,11 +60,11 @@
       "public": 70617039,
       "private": 70615956
     },
-    "pubKeyHash": 43,
+    "pubKeyHash": 55,
     "wif": 187,
     "client": {
-      "token":"XPT",
-      "symbol":"XѦ",
+      "token":"XNC",
+      "symbol":"Ẕ",
       "explorer":"https://texplorer.phantom.org"
     }
   }
