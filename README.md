@@ -23,31 +23,15 @@ bash DARKcommander.sh
 
 ## Details
 
-This is a fork from Lisk with the following features:
-- Removed sidechains (deprecated in favor of smartbridge)
-- Removed custom node version
-- Removed UI for stability and security reasons
-- Changed some constants (block rewards, blocktime etc...)
-- Added simple PBFT before forging new block
-- Ditch addresses from the protocol in favor of bitcoin like system, enabling HD Wallet as for BIP32
-- Completely rewritten node management using a single NodeManager and messaging system
-- Completely rewritten round management (removed mem_round, reward block fees to forger)
-- Added 64 bytes vendorField as first iteration of smart bridge
-- Made peers management entirely in-memory for efficiency
-- Strengthened the transaction management and broadcast (reject often, reject soon)
-- Rearchitect with relay nodes and forging nodes
-- Nodes broadcast only block headers.
+This is a fork from ARK with the following features:
+- Private Smart Contract Capability
+- Virtual Machine (WASM)
+- Faster TPS and block times
 
-### Planned features:
-- Simple blockchain validation for SPV and use in lite clients
-- Add IPFS as first class citizen (using smartbridge addressing)
-- Protocol improvements (uncle forging, voting weights).
-- Remove unsecured API
-- Routing tables
 
 ### Performance
-- stable on testnet at 5tx/s
-- pushed to 10tx/s on devnet
+- stable on testnet at 300tx/s
+- pushed to 400tx/s on devnet
 
 
 ## Developer Installation
@@ -111,7 +95,7 @@ sudo npm install grunt-cli -g
 
 Clone this repository
 ```
-git clone https://github.com/arkecosystem/ark-node.git
+git clone https://github.com/phantomcore/node.git
 cd ark-node
 ```
 
@@ -122,7 +106,7 @@ npm install
 ```
 
 ## Launch
-To launch Ark on testnet:
+To launch PHANTOM on testnet:
 ```
 createdb ark_testnet
 npm run start:testnet
