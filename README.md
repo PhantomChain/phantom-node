@@ -194,19 +194,14 @@ peace vanish bleak box tuna woman rally manage undo royal lucky since
 
 ## Security
 
-If you discover a security vulnerability within this application, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this application, please send an e-mail to security@phantom.org. All security vulnerabilities will be promptly addressed.
 
-## Authors
-- FX Thoorens <fx.thoorens@ark.io>
-- Boris Povod <boris@crypti.me>
-- Pavel Nekrasov <landgraf.paul@gmail.com>
-- Sebastian Stupurac <stupurac.sebastian@gmail.com>
-- Oliver Beddows <oliver@lisk.io>
 
 ## License
 
 The MIT License (MIT)
 
+Copyright (c) 2018 PHANTOM
 Copyright (c) 2016-2017 Ark
 Copyright (c) 2016 Lisk
 Copyright (c) 2014-2015 Crypti
