@@ -1,7 +1,6 @@
 # PHANTOM Node
-Ark is a next generation crypto-currency and decentralized application platform, written entirely in JavaScript. For more information please refer to our website: https://ark.io/.
+PHANTOM is a decentralized system that is a fork of ARK that is operated by a delegated proof-of-stake consensus protocol. PHANTOM, in its core, will allow users to create Private Smart Contracts and transmit private transactions within the network while giving the ability to use Private Smart Bridges for cross-chain private interoperability. 
 
-This version is still beta, use at your own risks
 
 ## Install, Upgrade etc...
 You need to provision a linux (ubuntu tested) server (digital ocean, vultur or other).
