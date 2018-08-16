@@ -36,6 +36,8 @@ This is a fork from ARK with the following features:
 
 ## Developer Installation
 
+Insutrctions coming soon
+
 ### Vagrant
 
 [Vagrant](https://www.vagrantup.com/) is a virtual development environment manager backed by a provider like [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
