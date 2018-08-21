@@ -1,10 +1,10 @@
 {
-  "name": "ark-node",
+  "name": "phantom-node",
   "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "doc": "docco -t docs/template/arkio.jst -c docs/template/arkio.css modules/* app.js README.md",
+    "doc": "docco -t docs/template/phantomio.jst -c docs/template/phantomio.css modules/* app.js README.md",
     "start:testnet": "node app.js --genesis genesisBlock.testnet.json --config config.testnet.json",
     "start:devnet": "node app.js --genesis genesisBlock.devnet.json --config config.devnet.json",
     "start:mainnet": "node app.js --genesis genesisBlock.mainnet.json --config config.mainnet.json -i",
@@ -13,9 +13,9 @@
     "test": "./node_modules/.bin/mocha",
     "cov": "./node_modules/.bin/mocha --require blanket -R html-cov test/helpers test/logic > tmp/coverage.html"
   },
-  "author": "Boris Povod <boris@crypti.me>, Pavel Nekrasov <landgraf.paul@gmail.com>, Oliver Beddows <oliver@lisk.io>, FX Thoorens <fx.thoorens@ark.io>",
+  "author": "Boris Povod <boris@crypti.me>, Pavel Nekrasov <landgraf.paul@gmail.com>, Oliver Beddows <oliver@lisk.io>, FX Thoorens <fx.thoorens@phantom.io>",
   "dependencies": {
-    "arkjs": "github:arkecosystem/ark-js#mainnet",
+    "phantomjs": "github:PhantomCore/phantom-js#mainnet",
     "async": "=2.0.1",
     "bip39": "^2.2.0",
     "body-parser": "=1.15.2",
@@ -36,7 +36,7 @@
     "json-sql": "LiskHQ/json-sql#27e1ed1",
     "lodash": "=4.16.2",
     "method-override": "=2.3.6",
-    "pg-monitor": "=0.5.11",
+    "pg-monitor": "=0.5.11",  
     "pg-native": "=1.10.0",
     "pg-promise": "=5.3.3",
     "popsicle": "=8.2.0",
