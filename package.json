@@ -72,11 +72,7 @@
     "jsdox": "=0.4.10",
     "jshint": "^2.9.6",
     "mocha": "=3.1.0",
-<<<<<<< HEAD
     "moment": "=2.22.2",
-=======
-    "moment": "=2.19.3",
->>>>>>> Update ‘moment’ dev dependency
     "supertest": "=2.0.0"
   },
   "config": {
