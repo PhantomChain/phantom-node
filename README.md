@@ -1,5 +1,5 @@
 # PHANTOM Node
-PHANTOM is a decentralized system that is a fork of ARK that is operated by a delegated proof-of-stake consensus protocol. PHANTOM, in its core, will allow users to create Private Smart Contracts and transmit private transactions within the network while giving the ability to use Private Smart Bridges for cross-chain private interoperability. 
+PHANTOM is a decentralized system that is a fork of Phantom that is operated by a delegated proof-of-stake consensus protocol. PHANTOM, in its core, will allow users to create Private Smart Contracts and transmit private transactions within the network while giving the ability to use Private Smart Bridges for cross-chain private interoperability. 
 
 
 ## Install, Upgrade etc...
@@ -8,8 +8,8 @@ You need to provision a linux (ubuntu tested) server (digital ocean, vultur or o
 Then use the excellent phantom-commander script
 ```
 cd
-wget https://phantom.io/ARKcommander.sh
-bash ARKcommander.sh
+wget https://phantom.org/Phantomcommander.sh
+bash Phantomcommander.sh
 ```
 
 For developers, please read the "Developer Installation" section below.  
@@ -17,13 +17,13 @@ For developers, please read the "Developer Installation" section below.
 or Alternatively run
 ```
 cd
-wget https://phantom.io/DARKcommander.sh
-bash DARKcommander.sh
+wget https://phantom.org/DPhantomcommander.sh
+bash DPhantomcommander.sh
 ```
 
 ## Details
 
-This is a fork from ARK with the following features:
+This is a fork from Phantom with the following features:
 - Private Smart Contract Capability
 - Virtual Machine (WASM)
 - Faster TPS and block times
@@ -114,13 +114,13 @@ createdb phantom_testnet
 npm run start:testnet
 ```
 
-To launch Ark on devtnet:
+To launch Phantom on devtnet:
 ```
 createdb phantom_devnet
 npm run start:devnet
 ```
 
-To launch Ark on mainnet (when launched):
+To launch Phantom on mainnet (when launched):
 ```
 createdb phantom_mainnet
 npm run start:mainnet
