@@ -1,5 +1,5 @@
 {
-  "ark": {
+  "phantom": {
     "messagePrefix": "ARK message:\n",
     "bip32": {
       "public": 46090600,
@@ -10,7 +10,7 @@
     "client": {
       "token":"ARK",
       "symbol":"Ѧ",
-      "explorer":"https://explorer.ark.io"
+      "explorer":"https://explorer.phantom.io"
     }
   },
   "bitcoin": {
@@ -37,7 +37,7 @@
     "client": {
       "token":"TARK",
       "symbol":"TѦ",
-      "explorer":"http://texplorer.ark.io"
+      "explorer":"http://texplorer.phantom.io"
     }
   },
   "devnet": {
@@ -51,7 +51,7 @@
     "client": {
       "token":"DARK",
       "symbol":"DѦ",
-      "explorer":"http://dexplorer.ark.io"
+      "explorer":"http://dexplorer.phantom.io"
     }
   },
   "phantomTestnet": {

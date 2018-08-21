@@ -5,13 +5,13 @@
   <title>accounts.js</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="arkio.css" />
+  <link rel="stylesheet" media="all" href="phantomio.css" />
 </head>
 <body>
   
     <div id="title">
          <h1>accounts.js</h1>
-         <img src="https://ark.io/wp-content/uploads/2016/10/ark-normal.png">
+         <img src="https://phantom.io/wp-content/uploads/2016/10/phantom-normal.png">
         <hr>
     </div>
   
@@ -131,7 +131,7 @@
 <span class="hljs-keyword">var</span> BlockReward = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../logic/blockReward.js'</span>);
 <span class="hljs-keyword">var</span> constants = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../helpers/constants.js'</span>);
 <span class="hljs-keyword">var</span> crypto = <span class="hljs-built_in">require</span>(<span class="hljs-string">'crypto'</span>);
-<span class="hljs-keyword">var</span> arkjs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'arkjs'</span>);
+<span class="hljs-keyword">var</span> phantomjs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'phantomjs'</span>);
 <span class="hljs-keyword">var</span> extend = <span class="hljs-built_in">require</span>(<span class="hljs-string">'extend'</span>);
 <span class="hljs-keyword">var</span> Router = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../helpers/router.js'</span>);
 <span class="hljs-keyword">var</span> schema = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../schema/accounts.js'</span>);
@@ -301,7 +301,7 @@ __private.blockReward = <span class="hljs-keyword">new</span> BlockReward();</pr
             </div>
             
             <div class="content"><div class='highlight'><pre>Accounts.prototype.generateAddressByPublicKey = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">publicKey</span>) </span>{
-	<span class="hljs-keyword">return</span> arkjs.crypto.getAddress(publicKey);
+	<span class="hljs-keyword">return</span> phantomjs.crypto.getAddress(publicKey);
 };</pre></div></div>
             
         </li>

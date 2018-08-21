@@ -137,7 +137,7 @@ dfn {
  * Addresses styling not present in IE 8/9.
  */
 
-mark {
+mphantom {
     background: #ff0;
     color: #000;
 }

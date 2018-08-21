@@ -3,13 +3,13 @@
     "address": "0.0.0.0",
     "version": "0.3.3",
     "fileLogLevel": "info",
-    "logFileName": "logs/ark.log",
+    "logFileName": "logs/phantom.log",
     "consoleLogLevel": "debug",
     "trustProxy": false,
     "db": {
         "host": "localhost",
         "port": 5432,
-        "database": "ark_main",
+        "database": "phantom_main",
         "user": null,
         "password": "password",
         "poolSize": 20,
@@ -85,8 +85,8 @@
         "options": {
             "port": 443,
             "address": "0.0.0.0",
-            "key": "./ssl/ark.key",
-            "cert": "./ssl/ark.crt"
+            "key": "./ssl/phantom.key",
+            "cert": "./ssl/phantom.crt"
         }
     },
     "nethash": "ed14889723f24ecc54871d058d98ce91ff2f973192075c0155ba2b7b70ad2511"

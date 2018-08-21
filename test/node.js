@@ -4,8 +4,8 @@
 var node = {};
 var networkName = "testnet"
 var network = require('../networks.json')[networkName];
-node.ark = require('./ark-js');
-node.ark.crypto.setNetworkVersion(network.pubKeyHash);
+node.phantom = require('./phantom-js');
+node.phantom.crypto.setNetworkVersion(network.pubKeyHash);
 
 // Requires
 node.bignum = require('../helpers/bignum.js');
@@ -270,8 +270,8 @@ node.randomAccount = function () {
 	account.password = node.randomPassword();
 	account.secondPassword = node.randomPassword();
 	account.username = node.randomDelegateName();
-	account.publicKey = node.ark.crypto.getKeys(account.password, network).publicKey;
-	account.address = node.ark.crypto.getAddress(account.publicKey, network.pubKeyHash);
+	account.publicKey = node.phantom.crypto.getKeys(account.password, network).publicKey;
+	account.address = node.phantom.crypto.getAddress(account.publicKey, network.pubKeyHash);
 
 	return account;
 };

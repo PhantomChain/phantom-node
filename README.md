@@ -5,10 +5,10 @@ PHANTOM is a decentralized system that is a fork of ARK that is operated by a de
 ## Install, Upgrade etc...
 You need to provision a linux (ubuntu tested) server (digital ocean, vultur or other).
 
-Then use the excellent ark-commander script
+Then use the excellent phantom-commander script
 ```
 cd
-wget https://ark.io/ARKcommander.sh
+wget https://phantom.io/ARKcommander.sh
 bash ARKcommander.sh
 ```
 
@@ -17,7 +17,7 @@ For developers, please read the "Developer Installation" section below.
 or Alternatively run
 ```
 cd
-wget https://ark.io/DARKcommander.sh
+wget https://phantom.io/DARKcommander.sh
 bash DARKcommander.sh
 ```
 
@@ -48,7 +48,7 @@ To start the Vagrant environment:
 vagrant up
 ```
 
-All dependency installation and configuration for the dev environment is in the `VagrantFile`. After installation, ark-node will automatically start and log all output to the console.
+All dependency installation and configuration for the dev environment is in the `VagrantFile`. After installation, phantom-node will automatically start and log all output to the console.
 
 To log into the Vagrant environment:
 
@@ -98,7 +98,7 @@ sudo npm install grunt-cli -g
 Clone this repository
 ```
 git clone https://github.com/phantomcore/node.git
-cd ark-node
+cd phantom-node
 ```
 
 Install node modules:
@@ -110,19 +110,19 @@ npm install
 ## Launch
 To launch PHANTOM on testnet:
 ```
-createdb ark_testnet
+createdb phantom_testnet
 npm run start:testnet
 ```
 
 To launch Ark on devtnet:
 ```
-createdb ark_devnet
+createdb phantom_devnet
 npm run start:devnet
 ```
 
 To launch Ark on mainnet (when launched):
 ```
-createdb ark_mainnet
+createdb phantom_mainnet
 npm run start:mainnet
 ```
 
@@ -153,7 +153,7 @@ Obviously you can hack away tasks/createGenesisBlock.js for your own custom use.
 
 You can the start with your own chain on a single node (all delegates will forge on your single node) using:
 ```
-createdb ark_newtest
+createdb phantom_newtest
 npm run start:newtest
 ```
 
@@ -161,7 +161,7 @@ Then you can distribute the config.json (without the delegates secrets inside, a
 
 
 ## Tests
-Load git submodule [ark-js](https://github.com/arkecosystem/ark-js):
+Load git submodule [phantom-js](https://github.com/phantomecosystem/phantom-js):
 ```
 git submodule init
 git submodule update

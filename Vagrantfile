@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
     ##########################################
 
     # Variables and arrays declarations
-    log="ark-install.log"
+    log="phantom-install.log"
 
     sudo apt-get update
     echo -e "Installing tools... "
@@ -70,12 +70,12 @@ Vagrant.configure("2") do |config|
     # Creating DB and user
     sudo -u postgres psql -c "CREATE USER $USER WITH PASSWORD 'password';"
     #sudo -u postgres createuser --createdb --password $USER
-    sudo -u postgres createdb -O $USER ark_testnet
+    sudo -u postgres createdb -O $USER phantom_testnet
     sudo service postgresql start
 
-    git clone https://github.com/arkecosystem/ark-node.git
+    git clone https://github.com/phantomecosystem/phantom-node.git
 
-    cd /home/vagrant/ark-node
+    cd /home/vagrant/phantom-node
     #rm -fr node_modules
     npm install grunt-cli
     npm install
@@ -85,7 +85,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
-    v.name = "ark_node_vm"
+    v.name = "phantom_node_vm"
   end
 
   # Disable automatic box update checking. If you disable this, then

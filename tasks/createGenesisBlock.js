@@ -1,7 +1,7 @@
 var moment = require('moment');
 var fs = require('fs');
 var path = require('path');
-var arkjs = require('arkjs');
+var phantomjs = require('phantomjs');
 var crypto = require('crypto');
 var bip39 = require('bip39');
 var ByteBuffer = require('bytebuffer');
@@ -75,7 +75,7 @@ var config = {
     address: "0.0.0.0",
     version: config_version,
     fileLogLevel: "info",
-    logFileName: "logs/ark.log",
+    logFileName: "logs/phantom.log",
     consoleLogLevel: "debug",
     trustProxy: false,
     db: {
@@ -147,7 +147,7 @@ var config = {
 };
 // general functions
 makeKeypair = function (seed) {
-	return arkjs.crypto.getKeys(seed, networks[config.network]);
+	return phantomjs.crypto.getKeys(seed, networks[config.network]);
 };
 
 sign = function (block, keypair) {
@@ -246,7 +246,7 @@ create = function (data) {
 
 	for (var i = 0; i < transactions.length; i++) {
 		var transaction = transactions[i];
-		var bytes = arkjs.crypto.getBytes(transaction);
+		var bytes = phantomjs.crypto.getBytes(transaction);
 
 		size += bytes.length;
 
@@ -289,7 +289,7 @@ create = function (data) {
 var delegates = [];
 var transactions = [];
 var remainingfund = {};
-arkjs.crypto.setNetworkVersion(networks[network_name].pubKeyHash);
+phantomjs.crypto.setNetworkVersion(networks[network_name].pubKeyHash);
 
 var genesis = {
   passphrase: bip39.generateMnemonic(),
@@ -300,11 +300,11 @@ var premine = {
   passphrase: bip39.generateMnemonic()
 };
 
-premine.publicKey = arkjs.crypto.getKeys(premine.passphrase).publicKey;
-premine.address = arkjs.crypto.getAddress(premine.publicKey, networks[config.network].pubKeyHash);
+premine.publicKey = phantomjs.crypto.getKeys(premine.passphrase).publicKey;
+premine.address = phantomjs.crypto.getAddress(premine.publicKey, networks[config.network].pubKeyHash);
 
-genesis.publicKey = arkjs.crypto.getKeys(genesis.passphrase).publicKey;
-genesis.address = arkjs.crypto.getAddress(genesis.publicKey, networks[config.network].pubKeyHash);
+genesis.publicKey = phantomjs.crypto.getKeys(genesis.passphrase).publicKey;
+genesis.address = phantomjs.crypto.getAddress(genesis.publicKey, networks[config.network].pubKeyHash);
 
 // creation of delegates
 for(var i=1; i<52; i++){
@@ -313,16 +313,16 @@ for(var i=1; i<52; i++){
     'username': "genesis_"+i
   };
 
-	delegate.publicKey = arkjs.crypto.getKeys(delegate.passphrase).publicKey;
-	delegate.address = arkjs.crypto.getAddress(delegate.publicKey, networks[config.network].pubKeyHash);
+	delegate.publicKey = phantomjs.crypto.getKeys(delegate.passphrase).publicKey;
+	delegate.address = phantomjs.crypto.getAddress(delegate.publicKey, networks[config.network].pubKeyHash);
 
 	// create delegate
-  var createDelegateTx = arkjs.delegate.createDelegate(delegate.passphrase, delegate.username);
+  var createDelegateTx = phantomjs.delegate.createDelegate(delegate.passphrase, delegate.username);
   createDelegateTx.fee = 0;
   createDelegateTx.timestamp = 0;
   createDelegateTx.senderId = delegate.address;
-  createDelegateTx.signature = arkjs.crypto.sign(createDelegateTx,arkjs.crypto.getKeys(delegate.passphrase));
-  createDelegateTx.id = arkjs.crypto.getId(createDelegateTx);
+  createDelegateTx.signature = phantomjs.crypto.sign(createDelegateTx,phantomjs.crypto.getKeys(delegate.passphrase));
+  createDelegateTx.id = phantomjs.crypto.getId(createDelegateTx);
 
   transactions.push(createDelegateTx);
 
@@ -335,31 +335,31 @@ for(var i=0; i < genesisAccounts.length; i++){
   var account = genesisAccounts[i];
   total += account.total;
 
-	//send ark to account
-	var premineTx = arkjs.transaction.createTransaction(account.address, account.total, null, premine.passphrase);
+	//send phantom to account
+	var premineTx = phantomjs.transaction.createTransaction(account.address, account.total, null, premine.passphrase);
 
 	premineTx.fee = 0;
 	premineTx.timestamp = 0;
 	premineTx.senderId = premine.address;
-	premineTx.signature = arkjs.crypto.sign(premineTx,arkjs.crypto.getKeys(premine.passphrase));
-	premineTx.id = arkjs.crypto.getId(premineTx);
+	premineTx.signature = phantomjs.crypto.sign(premineTx,phantomjs.crypto.getKeys(premine.passphrase));
+	premineTx.id = phantomjs.crypto.getId(premineTx);
 	transactions.push(premineTx);
 
 }
 
 remainingfund.total = totalpremine - total;
 
-var preminefund = arkjs.transaction.createTransaction(genesis.address, remainingfund.total, null, premine.passphrase);
+var preminefund = phantomjs.transaction.createTransaction(genesis.address, remainingfund.total, null, premine.passphrase);
 
 preminefund.fee = 0;
 preminefund.timestamp = 0;
 preminefund.senderId = premine.address;
-preminefund.signature = arkjs.crypto.sign(preminefund,arkjs.crypto.getKeys(premine.passphrase));
-preminefund.id = arkjs.crypto.getId(preminefund);
+preminefund.signature = phantomjs.crypto.sign(preminefund,phantomjs.crypto.getKeys(premine.passphrase));
+preminefund.id = phantomjs.crypto.getId(preminefund);
 transactions.push(preminefund);
 
 var genesisBlock = create({
-  keypair: arkjs.crypto.getKeys(genesis.passphrase, networks[config.network]),
+  keypair: phantomjs.crypto.getKeys(genesis.passphrase, networks[config.network]),
   transactions:transactions,
   timestamp:0
 });

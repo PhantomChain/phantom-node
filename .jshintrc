@@ -5,7 +5,7 @@
   "undef": true,
   "newcap" : false,
   "node": true,
-  "quotmark": "single",
+  "quotmphantom": "single",
   "strict" : true,
   "globals": {
     "gc": true,

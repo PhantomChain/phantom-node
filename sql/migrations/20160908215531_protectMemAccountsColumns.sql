@@ -11,7 +11,7 @@ DROP FUNCTION IF EXISTS revert_mem_account();
 CREATE FUNCTION revert_mem_account() RETURNS TRIGGER LANGUAGE PLPGSQL AS $$
 BEGIN
 
-  -- As per columns marked as immutable within application layer (logic/account.js).
+  -- As per columns mphantomed as immutable within application layer (logic/account.js).
 
   -- Revert any change of address
   IF NEW."address" <> OLD."address" THEN

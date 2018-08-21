@@ -5,13 +5,13 @@
   <title>app.js</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="arkio.css" />
+  <link rel="stylesheet" media="all" href="phantomio.css" />
 </head>
 <body>
   
     <div id="title">
          <h1>app.js</h1>
-         <img src="https://ark.io/wp-content/uploads/2016/10/ark-normal.png">
+         <img src="https://phantom.io/wp-content/uploads/2016/10/phantom-normal.png">
         <hr>
     </div>
   
@@ -833,8 +833,8 @@ process.on(<span class="hljs-string">'uncaughtException'</span>, <span class="hl
 			<span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
 	    <span class="hljs-keyword">var</span> passphrase = <span class="hljs-built_in">require</span>(<span class="hljs-string">"bip39"</span>).generateMnemonic();
 			self.log(<span class="hljs-string">"Seed    - private:"</span>,passphrase);
-			self.log(<span class="hljs-string">"WIF     - private:"</span>,<span class="hljs-built_in">require</span>(<span class="hljs-string">"arkjs"</span>).crypto.getKeys(passphrase).toWIF());
-			self.log(<span class="hljs-string">"Address - public :"</span>,<span class="hljs-built_in">require</span>(<span class="hljs-string">"arkjs"</span>).crypto.getAddress(<span class="hljs-built_in">require</span>(<span class="hljs-string">"arkjs"</span>).crypto.getKeys(passphrase).publicKey));
+			self.log(<span class="hljs-string">"WIF     - private:"</span>,<span class="hljs-built_in">require</span>(<span class="hljs-string">"phantomjs"</span>).crypto.getKeys(passphrase).toWIF());
+			self.log(<span class="hljs-string">"Address - public :"</span>,<span class="hljs-built_in">require</span>(<span class="hljs-string">"phantomjs"</span>).crypto.getAddress(<span class="hljs-built_in">require</span>(<span class="hljs-string">"phantomjs"</span>).crypto.getKeys(passphrase).publicKey));
 			callback();
 	  });
 	<span class="hljs-keyword">var</span> account=<span class="hljs-literal">null</span>;
@@ -897,10 +897,10 @@ process.on(<span class="hljs-string">'uncaughtException'</span>, <span class="hl
 
 	  });
 
-	vorpal.history(<span class="hljs-string">'ark-node'</span>);
+	vorpal.history(<span class="hljs-string">'phantom-node'</span>);
 
 	vorpal
-	  .delimiter(<span class="hljs-string">'ark-node&gt;'</span>)
+	  .delimiter(<span class="hljs-string">'phantom-node&gt;'</span>)
 	  .show();
 }</pre></div></div>
             

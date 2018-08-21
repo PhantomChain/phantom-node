@@ -336,7 +336,7 @@ Blockchain.prototype.onBlockRemoved = function(block) {
 //__EVENT__ `onBlockReceived`
 
 // Check against in-memory blockchain if the block is ok to be included
-// If so, mark the block with block.ready=true
+// If so, mphantom the block with block.ready=true
 Blockchain.prototype.onBlockReceived = function(block, peer) {
 	if(self.isPresent(block)){
 		library.logger.debug("Block already received", {id: block.id, height:block.height, peer:peer.string});
@@ -374,7 +374,7 @@ Blockchain.prototype.onBlockReceived = function(block, peer) {
 //__EVENT__ `onBlockForged`
 
 // Check if the forge block is coherent with current in-memory blockchain status
-// If so, marks block.ready = true and block.forged = true
+// If so, mphantoms block.ready = true and block.forged = true
 Blockchain.prototype.onBlockForged = function(block) {
 	if(self.isPresent(block)){
 		modules.accounts.getAccount({publicKey:block.generatorPublicKey}, function(err, delegate){

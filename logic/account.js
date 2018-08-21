@@ -591,7 +591,7 @@ Account.prototype.merge = function (address, diff, cb) {
 						update.$dec[value] = Math.floor(Math.abs(trueValue));
 						// If decrementing u_balance on account
 						if (update.$dec.u_balance) {
-							// Remove virginity and ensure marked columns become immutable
+							// Remove virginity and ensure mphantomed columns become immutable
 							update.virgin = 0;
 						}
 					}
