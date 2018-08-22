@@ -98,7 +98,7 @@ sudo npm install grunt-cli -g
 Clone this repository
 ```
 git clone https://github.com/phantomcore/node.git
-cd phantom-node
+cd node
 ```
 
 Install node modules:
