@@ -1,0 +1,110 @@
+{
+  "port": 4100,
+  "address": "0.0.0.0",
+  "version": "0.0.1",
+  "fileLogLevel": "info",
+  "logFileName": "logs/phantom.log",
+  "consoleLogLevel": "debug",
+  "trustProxy": false,
+  "db": {
+    "host": "phntm.ccyjhqamfwya.us-east-2.rds.amazonaws.com",
+    "port": 5432,
+    "database": "phantom_testnet",
+    "user": "phntm",
+    "password": "F2csrc986",
+    "poolSize": 20,
+    "poolIdleTimeout": 30000,
+    "reapIntervalMillis": 1000,
+    "logEvents": [
+      "error"
+    ]
+  },
+  "api": {
+    "mount": true,
+    "access": {
+      "whiteList": []
+    },
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      }
+    }
+  },
+  "peers": {
+    "minimumNetworkReach": 1,
+    "list": [
+      {
+        "ip": "127.0.0.1",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.2",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.3",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.5",
+        "port": 4100
+      }
+    ],
+    "blackList": [],
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      },
+      "maxUpdatePeers": 20,
+      "timeout": 5000
+    }
+  },
+  "forging": {
+    "coldstart": 6,
+    "force": true,
+    "secret": {
+      "secret": [
+        "hope target arena announce actress pistol soup title river burst fantasy once",
+        "enlist fall live hip exclude mass sadness cash surprise media arrow usage",
+        "climb ceiling cupboard grunt afraid entire gospel ignore garment casual shoe effort",
+        "cat amazing choice pair hotel hard region ocean dial damage army squirrel",
+        "print bounce portion august width flight panther audit arrange exile opinion found",
+        "expand romance belt rescue space misery stand spin matter disease desk feed",
+        "trick museum large dance mass salon zone tool play myth response monkey",
+        "situate amount suggest bulb humor rabbit shine team robot agent dress luxury",
+        "dentist egg muscle bike strategy endorse wise monster reopen leopard crawl machine",
+        "model panic garlic napkin ugly butter layer boat cradle vast light tomato"
+      ]
+    },
+    "access": {
+      "whiteList": [
+        "127.0.0.1"
+      ]
+    }
+  },
+  "loading": {
+    "verifyOnLoading": false,
+    "loadPerIteration": 5000
+  },
+  "ssl": {
+    "enabled": true,
+    "options": {
+      "port": 4200,
+      "address": "0.0.0.0",
+      "key": "/var/node/ssl/wildcard.phantom.org.key",
+      "cert": "/var/node/ssl/wildcard.phantom.org.crt"
+    }
+  },
+  "network": "phantomTestnet",
+  "nethash": "431b6f33ab9617d694e69e4cbecbbd22fc6f1fce12ba6a5978c4e353bcb1809c"
+}

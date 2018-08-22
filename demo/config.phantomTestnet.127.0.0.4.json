@@ -1,0 +1,110 @@
+{
+  "port": 4100,
+  "address": "0.0.0.0",
+  "version": "0.0.1",
+  "fileLogLevel": "info",
+  "logFileName": "logs/phantom.log",
+  "consoleLogLevel": "debug",
+  "trustProxy": false,
+  "db": {
+    "host": "phntm.ccyjhqamfwya.us-east-2.rds.amazonaws.com",
+    "port": 5432,
+    "database": "phantom_testnet",
+    "user": "phntm",
+    "password": "F2csrc986",
+    "poolSize": 20,
+    "poolIdleTimeout": 30000,
+    "reapIntervalMillis": 1000,
+    "logEvents": [
+      "error"
+    ]
+  },
+  "api": {
+    "mount": true,
+    "access": {
+      "whiteList": []
+    },
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      }
+    }
+  },
+  "peers": {
+    "minimumNetworkReach": 1,
+    "list": [
+      {
+        "ip": "127.0.0.1",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.2",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.3",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 4100
+      },
+      {
+        "ip": "127.0.0.5",
+        "port": 4100
+      }
+    ],
+    "blackList": [],
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      },
+      "maxUpdatePeers": 20,
+      "timeout": 5000
+    }
+  },
+  "forging": {
+    "coldstart": 6,
+    "force": true,
+    "secret": {
+      "secret": [
+        "fiction turtle lend rail earn road define relax fade can identify among",
+        "lens like broken gospel camera flock ritual among act supply relief acquire",
+        "during pistol age tennis grunt soon announce almost village corn identify purchase",
+        "into forest cruise pear fiscal carpet language core grain song focus supply",
+        "enter either current foot stand siege stand garbage much train elevator rule",
+        "bottom fan essay sorry milk curve ankle away avocado cliff guide toward",
+        "cycle bonus motion fuel myth reward margin replace aunt visit gap food",
+        "afford west gift hub breeze behave motion wing uniform idle wheel flush",
+        "increase later dutch distance squirrel later media laugh process rigid bid noodle",
+        "extra near fossil beyond test crawl gallery thunder olympic aisle exit suggest"
+      ]
+    },
+    "access": {
+      "whiteList": [
+        "127.0.0.1"
+      ]
+    }
+  },
+  "loading": {
+    "verifyOnLoading": false,
+    "loadPerIteration": 5000
+  },
+  "ssl": {
+    "enabled": true,
+    "options": {
+      "port": 4200,
+      "address": "0.0.0.0",
+      "key": "/var/node/ssl/wildcard.phantom.org.key",
+      "cert": "/var/node/ssl/wildcard.phantom.org.crt"
+    }
+  },
+  "network": "phantomTestnet",
+  "nethash": "431b6f33ab9617d694e69e4cbecbbd22fc6f1fce12ba6a5978c4e353bcb1809c"
+}

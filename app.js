@@ -123,18 +123,21 @@ d.on('error', function (err) {
 
 d.run(function () {
 	var modules = [];
-	console.log(colors.cyan("\n\
-      {_       {_______    {__   {__       {___     {__    {____     {_____    {________\n\
-     {_ __     {__    {__  {__  {__        {_ {__   {__  {__    {__  {__   {__ {__\n\
-    {_  {__    {__    {__  {__ {__         {__ {__  {__{__        {__{__    {__{__\n\
-   {__   {__   {_ {__      {_ {_           {__  {__ {__{__        {__{__    {__{______\n\
-  {______ {__  {__  {__    {__  {__        {__   {_ {__{__        {__{__    {__{__\n\
- {__       {__ {__    {__  {__   {__       {__    {_ __  {__     {__ {__   {__ {__\n\
-{__         {__{__      {__{__     {__     {__      {__    {____     {_____    {________\n\
-\n\n\
-	                     W E L C O M E  A B O A R D !\n\
-\n\
-"));
+console.log(colors.cyan(`
+
+8888888b.     888b    888 .d88888b. 8888888b. 8888888888 
+888   Y88b    8888b   888d88P" "Y88b888    88b888
+888    888    88888b  888888     888888    888888  
+888   d88P    888Y88b 888888     888888    8888888888
+8888888P"     888 Y88b888888     888888    888888
+888           888  Y88888888     888888    888888
+888           888   Y8888Y88b. .d88P888  .d88P888 
+888           888    Y888 "Y88888P" 8888888P" 8888888888
+							
+
+	        W E L C O M E  A B O A R D !
+                                                                      
+`));
 	async.auto({
 		config: function (cb) {
 			try {
@@ -341,12 +344,12 @@ d.run(function () {
 			});
 
 			scope.network.server.listen(scope.config.port, scope.config.address, function (err) {
-				scope.logger.info('# Ark node server started on: ' + scope.config.address + ':' + scope.config.port);
+				scope.logger.info('# Phantom node server started on: ' + scope.config.address + ':' + scope.config.port);
 
 				if (!err) {
 					if (scope.config.ssl.enabled) {
 						scope.network.https.listen(scope.config.ssl.options.port, scope.config.ssl.options.address, function (err) {
-							scope.logger.info('Ark https started: ' + scope.config.ssl.options.address + ':' + scope.config.ssl.options.port);
+							scope.logger.info('Phantom https started: ' + scope.config.ssl.options.address + ':' + scope.config.ssl.options.port);
 
 							cb(err, scope.network);
 						});
