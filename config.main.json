@@ -1,93 +1,81 @@
 {
-    "port": 8000,
-    "address": "0.0.0.0",
-    "version": "0.3.3",
-    "fileLogLevel": "info",
-    "logFileName": "logs/phantom.log",
-    "consoleLogLevel": "debug",
-    "trustProxy": false,
-    "db": {
-        "host": "localhost",
-        "port": 5432,
-        "database": "phantom_main",
-        "user": null,
-        "password": "password",
-        "poolSize": 20,
-        "poolIdleTimeout": 30000,
-        "reapIntervalMillis": 1000,
-        "logEvents": [
-            "error"
-        ]
+  "port": 4100,
+  "address": "0.0.0.0",
+  "version": "0.0.1",
+  "fileLogLevel": "info",
+  "logFileName": "logs/phantom.log",
+  "consoleLogLevel": "debug",
+  "trustProxy": false,
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "phantom_testnet",
+    "user": "phantom",
+    "password": "123",
+    "poolSize": 20,
+    "poolIdleTimeout": 30000,
+    "reapIntervalMillis": 1000,
+    "logEvents": [
+      "error"
+    ]
+  },
+  "api": {
+    "mount": true,
+    "access": {
+      "whiteList": []
     },
-    "api": {
-        "access": {
-            "whiteList": []
-        },
-        "options": {
-            "limits": {
-                "max": 0,
-                "delayMs": 0,
-                "delayAfter": 0,
-                "windowMs": 60000
-            }
-        }
-    },
-    "peers": {
-        "list": [
-            {
-                "ip": "40.68.214.86",
-                "port": 8000
-            },
-            {
-                "ip": "13.70.207.248",
-                "port": 8000
-            },
-            {
-                "ip": "13.89.42.130",
-                "port": 8000
-            },
-            {
-                "ip": "52.160.98.183",
-                "port": 8000
-            },
-            {
-                "ip": "40.121.84.254",
-                "port": 8000
-            }
-        ],
-        "blackList": [],
-        "options": {
-            "limits": {
-                "max": 0,
-                "delayMs": 0,
-                "delayAfter": 0,
-                "windowMs": 60000
-            },
-            "maxUpdatePeers": 20,
-            "timeout": 5000
-        }
-    },
-    "forging": {
-        "force": false,
-        "secret": [],
-        "access": {
-            "whiteList": [
-                "127.0.0.1"
-            ]
-        }
-    },
-    "loading": {
-        "verifyOnLoading": false,
-        "loadPerIteration": 5000
-    },
-    "ssl": {
-        "enabled": false,
-        "options": {
-            "port": 443,
-            "address": "0.0.0.0",
-            "key": "./ssl/phantom.key",
-            "cert": "./ssl/phantom.crt"
-        }
-    },
-    "nethash": "ed14889723f24ecc54871d058d98ce91ff2f973192075c0155ba2b7b70ad2511"
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      }
+    }
+  },
+  "peers": {
+    "minimumNetworkReach": 1,
+    "list": [
+      {
+        "ip": "texplorer.phantom.org",
+        "port": 4100
+      }
+    ],
+    "blackList": [],
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      },
+      "maxUpdatePeers": 20,
+      "timeout": 5000
+    }
+  },
+  "forging": {
+    "coldstart": 6,
+    "force": true,
+    "secret": [],
+    "access": {
+      "whiteList": [
+        "127.0.0.1"
+      ]
+    }
+  },
+  "loading": {
+    "verifyOnLoading": false,
+    "loadPerIteration": 5000
+  },
+  "ssl": {
+    "enabled": false,
+    "options": {
+      "port": 4200,
+      "address": "0.0.0.0",
+      "key": "/var/node/ssl/wildcard.phantom.org.key",
+      "cert": "/var/node/ssl/wildcard.phantom.org.crt"
+    }
+  },
+  "network": "phantomTestnet",
+  "nethash": "e62ee59508e610421d7d39567cca36479397fa3c63b1d2e9458e08dee9eb6481"
 }
