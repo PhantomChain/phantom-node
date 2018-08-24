@@ -1,57 +1,57 @@
 {
   "phantom": {
-    "messagePrefix": "ARK message:\n",
+    "messagePrefix": "PHANTOM Testnet message:\n",
     "bip32": {
-      "public": 46090600,
-      "private": 46089520
+      "public": 70617039,
+      "private": 70615956
     },
-    "pubKeyHash": 23,
-    "wif": 170,
+    "pubKeyHash": 55,
+    "wif": 187,
     "client": {
-      "token":"ARK",
-      "symbol":"Ѧ",
-      "explorer":"https://explorer.phantom.io"
+      "token":"XNC",
+      "symbol":"Ẕ",
+      "explorer":"https://texplorer.phantom.org"
     }
   },
-  "bitcoin": {
-    "messagePrefix": "Bitcoin message:\n",
+    "messagePrefix": "PHANTOM Testnet message:\n",
     "bip32": {
-      "public": 46090600,
-      "private": 46089520
+      "public": 70617039,
+      "private": 70615956
     },
-    "pubKeyHash": 1,
-    "wif": 1,
+    "pubKeyHash": 55,
+    "wif": 187,
     "client": {
-      "token":"Bitcoin",
-      "symbol":"B"
+      "token":"XNC",
+      "symbol":"Ẕ",
+      "explorer":"https://texplorer.phantom.org"
     }
   },
   "testnet": {
-    "messagePrefix": "TESTNET message:\n",
+    "messagePrefix": "PHANTOM Testnet message:\n",
     "bip32": {
       "public": 70617039,
       "private": 70615956
     },
-    "pubKeyHash": 82,
-    "wif": 186,
+    "pubKeyHash": 55,
+    "wif": 187,
     "client": {
-      "token":"TARK",
-      "symbol":"TѦ",
-      "explorer":"http://texplorer.phantom.io"
+      "token":"XNC",
+      "symbol":"Ẕ",
+      "explorer":"https://texplorer.phantom.org"
     }
   },
   "devnet": {
-    "messagePrefix": "DEVNET message:\n",
+    "messagePrefix": "PHANTOM Testnet message:\n",
     "bip32": {
       "public": 70617039,
       "private": 70615956
     },
-    "pubKeyHash": 30,
+    "pubKeyHash": 55,
     "wif": 187,
     "client": {
-      "token":"DARK",
-      "symbol":"DѦ",
-      "explorer":"http://dexplorer.phantom.io"
+      "token":"XNC",
+      "symbol":"Ẕ",
+      "explorer":"https://texplorer.phantom.org"
     }
   },
   "phantomTestnet": {
