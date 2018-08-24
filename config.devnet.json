@@ -1,7 +1,7 @@
 {
-  "port": 4002,
+  "port": 4100,
   "address": "0.0.0.0",
-  "version": "1.1.0",
+  "version": "0.0.1",
   "fileLogLevel": "info",
   "logFileName": "logs/phantom.log",
   "consoleLogLevel": "debug",
@@ -9,9 +9,9 @@
   "db": {
     "host": "localhost",
     "port": 5432,
-    "database": "phantom_devnet",
-    "user": null,
-    "password": "password",
+    "database": "phantom_testnet",
+    "user": "phantom",
+    "password": "123",
     "poolSize": 20,
     "poolIdleTimeout": 30000,
     "reapIntervalMillis": 1000,
@@ -34,27 +34,11 @@
     }
   },
   "peers": {
-    "minimumNetworkReach": 10,
+    "minimumNetworkReach": 1,
     "list": [
       {
-        "ip": "167.114.29.32",
-        "port": 4002
-      },
-      {
-        "ip": "167.114.29.33",
-        "port": 4002
-      },
-      {
-        "ip": "167.114.29.34",
-        "port": 4002
-      },
-      {
-        "ip": "167.114.29.35",
-        "port": 4002
-      },
-      {
-        "ip": "167.114.29.36",
-        "port": 4002
+        "ip": "http://texplorer.phantom.org",
+        "port": 4100
       }
     ],
     "blackList": [],
@@ -86,12 +70,12 @@
   "ssl": {
     "enabled": false,
     "options": {
-      "port": 443,
+      "port": 4200,
       "address": "0.0.0.0",
-      "key": "./ssl/phantom.key",
-      "cert": "./ssl/phantom.crt"
+      "key": "/var/node/ssl/wildcard.phantom.org.key",
+      "cert": "/var/node/ssl/wildcard.phantom.org.crt"
     }
   },
-  "network": "devnet",
-  "nethash": "578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23"
+  "network": "phantomTestnet",
+  "nethash": "e62ee59508e610421d7d39567cca36479397fa3c63b1d2e9458e08dee9eb6481"
 }
