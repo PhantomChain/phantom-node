@@ -14,7 +14,7 @@ function postTransaction (transaction, done) {
 	});
 }
 
-function sendArk (params, done) {
+function sendPhantom (params, done) {
 	var transaction = node.phantom.transaction.createTransaction(params.recipientId, params.amount, null, params.secret);
 
 	postTransaction(transaction, function (err, res) {
@@ -58,7 +58,7 @@ describe('POST /peer/transactions', function () {
 
 				postTransaction(transaction, function (err, res) {
 					node.expect(res.body).to.have.property('success').to.be.not.ok;
-					node.expect(res.body).to.have.property('error').to.match(/Account does not have enough ARK: [a-zA-Z0-9]+ balance: 0/);
+					node.expect(res.body).to.have.property('error').to.match(/Account does not have enough PHANTOM: [a-zA-Z0-9]+ balance: 0/);
 					done();
 				});
 			});
@@ -67,7 +67,7 @@ describe('POST /peer/transactions', function () {
 		describe('when account has funds', function () {
 
 			before(function (done) {
-				sendArk({
+				sendPhantom({
 					secret: node.gAccount.password,
 					amount: node.fees.delegateRegistrationFee,
 					recipientId: account.address
@@ -121,7 +121,7 @@ describe('POST /peer/transactions', function () {
 		describe('twice within the same block', function () {
 
 			before(function (done) {
-				sendArk({
+				sendPhantom({
 					secret: node.gAccount.password,
 					amount: (node.fees.delegateRegistrationFee * 2),
 					recipientId: account2.address

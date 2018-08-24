@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
         sudo ntpd -gq &>> $log
         sudo service ntp start &>> $log
         if ! sudo pgrep -x "ntpd" > /dev/null; then
-          echo -e "NTP failed to start! It should be installed and running for ARK.\n Check /etc/ntp.conf for any issues and correct them first! \n Exiting."
+          echo -e "NTP failed to start! It should be installed and running for PHANTOM.\n Check /etc/ntp.conf for any issues and correct them first! \n Exiting."
           exit 1
         fi
         echo -e "NTP was successfuly installed and started with PID:" `grep -x "ntpd"`

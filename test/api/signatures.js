@@ -18,13 +18,13 @@ function putDelegate (params, done) {
 	node.put('/api/delegates', params, done);
 }
 
-function sendArk (account, done) {
-	var randomArk = node.randomArk();
-	var expectedFee = node.expectedFee(randomArk);
+function sendPhantom (account, done) {
+	var randomPhantom = node.randomPhantom();
+	var expectedFee = node.expectedFee(randomPhantom);
 
 	putTransaction({
 		secret: node.gAccount.password,
-		amount: randomArk,
+		amount: randomPhantom,
 		recipientId: account.address
 	}, function (err, res) {
 		node.expect(res.body).to.have.property('success').to.be.ok;
@@ -34,13 +34,13 @@ function sendArk (account, done) {
 
 before(function (done) {
 	setTimeout(function () {
-		sendArk(account, done);
+		sendPhantom(account, done);
 	}, 2000);
 });
 
 before(function (done) {
 	setTimeout(function () {
-		sendArk(account2, done);
+		sendPhantom(account2, done);
 	}, 2000);
 });
 
@@ -66,7 +66,7 @@ describe('PUT /api/signatures', function () {
 
 		putSignature(validParams, function (err, res) {
 			node.expect(res.body).to.have.property('success').to.be.not.ok;
-			node.expect(res.body).to.have.property('error').to.match(/Account does not have enough ARK: [a-zA-Z0-9]+ balance: 0/);
+			node.expect(res.body).to.have.property('error').to.match(/Account does not have enough PHANTOM: [a-zA-Z0-9]+ balance: 0/);
 			done();
 		});
 	});
@@ -76,7 +76,7 @@ describe('PUT /api/signatures', function () {
 
 		putSignature(validParams, function (err, res) {
 			node.expect(res.body).to.have.property('success').to.be.not.ok;
-			node.expect(res.body).to.have.property('error').to.match(/Account does not have enough ARK: [a-zA-Z0-9]+ balance: 0/);
+			node.expect(res.body).to.have.property('error').to.match(/Account does not have enough PHANTOM: [a-zA-Z0-9]+ balance: 0/);
 			done();
 		});
 	});

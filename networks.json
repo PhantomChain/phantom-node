@@ -1,6 +1,6 @@
 {
   "phantom": {
-    "messagePrefix": "ARK message:\n",
+    "messagePrefix": "PHANTOM message:\n",
     "bip32": {
       "public": 46090600,
       "private": 46089520
@@ -8,9 +8,9 @@
     "pubKeyHash": 23,
     "wif": 170,
     "client": {
-      "token":"ARK",
+      "token":"PHANTOM",
       "symbol":"Ѧ",
-      "explorer":"https://explorer.phantom.io"
+      "explorer":"https://texplorer.phantom.org"
     }
   },
   "bitcoin": {
@@ -35,9 +35,9 @@
     "pubKeyHash": 82,
     "wif": 186,
     "client": {
-      "token":"TARK",
+      "token":"TPHANTOM",
       "symbol":"TѦ",
-      "explorer":"http://texplorer.phantom.io"
+      "explorer":"https://texplorer.phantom.org"
     }
   },
   "devnet": {
@@ -49,9 +49,9 @@
     "pubKeyHash": 30,
     "wif": 187,
     "client": {
-      "token":"DARK",
+      "token":"DPHANTOM",
       "symbol":"DѦ",
-      "explorer":"http://dexplorer.phantom.io"
+      "explorer":"https://texplorer.phantom.org"
     }
   },
   "phantomTestnet": {

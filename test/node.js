@@ -31,7 +31,7 @@ require('colors');
 node.baseUrl = 'http://localhost:' + node.config.port;
 node.api = node.supertest(node.baseUrl);
 
-node.normalizer = 100000000; // Use this to convert ARK amount to normal value
+node.normalizer = 100000000; // Use this to convert PHANTOM amount to normal value
 node.blockTime = 10000; // Block time in miliseconds
 node.blockTimePlus = 12000; // Block time + 2 seconds in miliseconds
 node.version = '0.0.0'; // Node version
@@ -60,8 +60,8 @@ if (process.env.SILENT === 'true') {
 	node.debug = console.log;
 }
 
-// Random ARK amount
-node.Ark = Math.floor(Math.random() * (100000 * 100000000)) + 1;
+// Random PHANTOM amount
+node.Phantom = Math.floor(Math.random() * (100000 * 100000000)) + 1;
 
 // Returns a random delegate name
 node.randomDelegateName = function () {
@@ -87,8 +87,8 @@ node.randomProperty = function (obj, needKey) {
 	}
 };
 
-// Returns random ARK amount
-node.randomArk = function () {
+// Returns random PHANTOM amount
+node.randomPhantom = function () {
 	return Math.floor(Math.random() * (100 * 100000000)) + (10 * 100000000);
 };
 
