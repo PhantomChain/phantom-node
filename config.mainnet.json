@@ -37,7 +37,7 @@
     "minimumNetworkReach": 1,
     "list": [
       {
-        "ip": "http://texplorer.phantom.org",
+        "ip": "texplorer.phantom.org",
         "port": 4100
       }
     ],
