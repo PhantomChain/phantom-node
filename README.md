@@ -24,9 +24,9 @@ bash DPhantomcommander.sh
 ## Details
 
 This is a fork from Phantom with the following features:
-- Private Smart Contract Capability
-- Virtual Machine (WASM)
-- Faster TPS and block times
+- Private Smart Contract Capability - Base Build Support
+- Virtual Machine (WASM) - Base Build Support
+- Faster TPS and block times - Base Build Support
 
 
 ### Performance
