@@ -1,5 +1,5 @@
 # PHANTOM Node
-PHANTOM is a decentralized system that is a fork of Phantom that is operated by a delegated proof-of-stake consensus protocol. PHANTOM, in its core, will allow users to create Private Smart Contracts and transmit private transactions within the network while giving the ability to use Private Smart Bridges for cross-chain private interoperability. 
+PHANTOM is a decentralized system that is a fork of ARK that is operated by a delegated proof-of-stake consensus protocol. PHANTOM, in its core, will allow users to create Private Smart Contracts and transmit private transactions within the network while giving the ability to use Private Smart Bridges for cross-chain private interoperability. 
 
 
 ## Install, Upgrade etc...
