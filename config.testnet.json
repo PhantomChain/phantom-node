@@ -63,7 +63,7 @@
   },
   "forging": {
     "coldstart": 6,
-    "force": true,
+    "force": false,
     "secret": [],
     "access": {
       "whiteList": [
@@ -80,8 +80,8 @@
     "options": {
       "port": 4200,
       "address": "0.0.0.0",
-      "key": "/var/node/ssl/wildcard.phantom.org.key",
-      "cert": "/var/node/ssl/wildcard.phantom.org.crt"
+      "key": "",
+      "cert": ""
     }
   },
   "network": "phantomTestnet",
