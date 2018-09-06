@@ -11,7 +11,7 @@
   },
   "author": "Boris Povod <boris@crypti.me>, Pavel Nekrasov <landgraf.paul@gmail.com>, Oliver Beddows <oliver@lisk.io>, FX Thoorens <fx.thoorens@phantom.io>",
   "dependencies": {
-    "phantomjs": "github:PhantomCore/phantom-js#master",
+    "phantomjscore": "^0.2.1",
     "async": "=2.0.1",
     "bip39": "^2.2.0",
     "body-parser": "=1.15.2",
