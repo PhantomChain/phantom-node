@@ -606,8 +606,8 @@ function startInteractiveMode(scope){
 			var self = this;
 	    var passphrase = require("bip39").generateMnemonic();
 			self.log("Seed    - private:",passphrase);
-			self.log("WIF     - private:",require("phantomjs").crypto.getKeys(passphrase).toWIF());
-			self.log("Address - public :",require("phantomjs").crypto.getAddress(require("phantomjs").crypto.getKeys(passphrase).publicKey));
+			self.log("WIF     - private:",require("phantomjscore").crypto.getKeys(passphrase).toWIF());
+			self.log("Address - public :",require("phantomjscore").crypto.getAddress(require("phantomjscore").crypto.getKeys(passphrase).publicKey));
 			callback();
 	  });
 	var account=null;
