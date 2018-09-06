@@ -1,6 +1,6 @@
 'use strict';
 
-var phantomjs = require('phantomjs');
+var phantomjs = require('phantomjscore');
 
 function Crypto(scope){
 	this.scope = scope;

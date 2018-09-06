@@ -2,7 +2,7 @@
 
 var slots = require('../helpers/slots.js');
 var crypto = require('crypto');
-var phantomjs = require('phantomjs');
+var phantomjs = require('phantomjscore');
 var bignum = require('../helpers/bignum.js');
 var ByteBuffer = require('bytebuffer');
 var BlockReward = require('../logic/blockReward.js');
