@@ -15,7 +15,7 @@ tmp
 config.main.json
 genesisBlock.main.json
 .vagrant
-private/
+demo/
 config.phantomTestnet.autoforging.json
 config.phantomTestnet.json
 genesisBlock.phantomTestnet.json

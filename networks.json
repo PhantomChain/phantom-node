@@ -8,13 +8,13 @@
     "pubKeyHash": 55,
     "wif": 187,
     "client": {
-      "token":"XNC",
-      "symbol":"Ẕ",
+      "token":"PHANTOM",
+      "symbol":"Ѧ",
       "explorer":"https://texplorer.phantom.org"
     }
   },
 
-   "testnet": {
+  "testnet": {
     "messagePrefix": "PHANTOM Testnet message:\n",
     "bip32": {
       "public": 70617039,
@@ -23,8 +23,8 @@
     "pubKeyHash": 55,
     "wif": 187,
     "client": {
-      "token":"XNC",
-      "symbol":"Ẕ",
+      "token":"TPHANTOM",
+      "symbol":"TѦ",
       "explorer":"https://texplorer.phantom.org"
     }
   },
@@ -37,8 +37,8 @@
     "pubKeyHash": 55,
     "wif": 187,
     "client": {
-      "token":"XNC",
-      "symbol":"Ẕ",
+      "token":"DPHANTOM",
+      "symbol":"DѦ",
       "explorer":"https://texplorer.phantom.org"
     }
   },
