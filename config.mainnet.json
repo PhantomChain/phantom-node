@@ -1,11 +1,7 @@
 {
   "port": 4100,
   "address": "0.0.0.0",
-<<<<<<< HEAD
   "version": "0.0.1",
-=======
-  "version": "1.0.3",
->>>>>>> bump version
   "fileLogLevel": "info",
   "logFileName": "logs/phantom.log",
   "consoleLogLevel": "debug",
@@ -38,12 +34,7 @@
     }
   },
   "peers": {
-<<<<<<< HEAD
     "minimumNetworkReach": 1,
-=======
-    "queryReach": 20,
-    "minimumNetworkReach": 20,
->>>>>>> Added queryReach to config, fixed comparison to string, sort peers by delay for querying.
     "list": [
       {
         "ip": "texplorer.phantom.org",
