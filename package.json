@@ -15,7 +15,7 @@
   },
   "author": "Boris Povod <boris@crypti.me>, Pavel Nekrasov <landgraf.paul@gmail.com>, Oliver Beddows <oliver@lisk.io>, FX Thoorens <fx.thoorens@phantom.io>",
   "dependencies": {
-    "phantomjscore": "^0.2.1",
+    "phantomjscore": "github:PhantomChain/phantom-js",
     "async": "=2.0.1",
     "bip39": "^2.2.0",
     "body-parser": "^1.18.3",
@@ -39,7 +39,6 @@
     "pg-monitor": "=0.5.11",
     "pg-native": "=1.10.0",
     "pg-promise": "=5.3.3",
-    "phantomjscore": "github:PhantomChain/phantom-js",
     "popsicle": "=8.2.0",
     "pug": "^2.0.0-beta11",
     "randomstring": "=1.1.5",

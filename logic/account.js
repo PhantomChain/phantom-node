@@ -697,8 +697,6 @@ Account.prototype.merge = function (address, diff, cb) {
 		});
 	}
 
-	console.log('===> Account Merge: ', update)
-
 	if (Object.keys(update).length) {
 		var sql = jsonSql.build({
 			type: 'update',
