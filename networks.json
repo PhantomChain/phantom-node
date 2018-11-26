@@ -9,8 +9,8 @@
     "wif": 187,
     "client": {
       "token":"PHANTOM",
-      "symbol":"Ѧ",
-      "explorer":"https://texplorer.phantom.org"
+      "symbol":"Ẕ",
+      "explorer":"https://texplorer.phantom.io"
     }
   },
 
@@ -38,7 +38,7 @@
     "wif": 187,
     "client": {
       "token":"DPHANTOM",
-      "symbol":"DѦ",
+      "symbol":"DẔ",
       "explorer":"https://texplorer.phantom.org"
     }
   },

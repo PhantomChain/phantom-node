@@ -27,6 +27,7 @@ function sendPhantom (account, i, done) {
 		amount: randomPhantom,
 		recipientId: account.address
 	}, function (err, res) {
+		console.log(res.body)
 		node.expect(res.body).to.have.property('success').to.be.ok;
 		if (res.body.success && i != null) {
 			accounts[i].balance = randomPhantom / node.normalizer;

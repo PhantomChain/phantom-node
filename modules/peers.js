@@ -129,6 +129,8 @@ __private.updatePeersList = function (cb) {
 							api: '/status',
 							method: 'GET'
 						}, function (err, res) {
+							library.logger.debug('=====> ', library.config.minimumVersion)
+
 							if (res.body && res.body.height) {
 								if(peer.version >= library.config.minimumVersion) {
 									library.logger.debug("Adding peer", peer.ip);

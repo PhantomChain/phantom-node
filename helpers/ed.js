@@ -1,8 +1,8 @@
 'use strict';
 
 var phantomjs = require('phantomjscore');
-var network = phantomjs.networks.ark;
-var ed = {};s
+var network = phantomjs.networks.phantom;
+var ed = {};
 
 ed.makeKeypair = function (seed) {
 	return phantomjs.crypto.getKeys(seed);
