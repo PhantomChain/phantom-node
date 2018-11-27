@@ -117,6 +117,7 @@ Accounts.prototype.generateAddressByPublicKey = function (publicKey) {
 Accounts.prototype.getAccount = function (filter, fields, cb) {
 	if (filter.publicKey) {
 		filter.address = self.generateAddressByPublicKey(filter.publicKey);
+		console.log('===> Account Address: ', filter.address);
 		delete filter.publicKey;
 	}
 

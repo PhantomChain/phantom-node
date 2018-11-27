@@ -5,8 +5,8 @@
       "public": 70617039,
       "private": 70615956
     },
-    "pubKeyHash": 55,
-    "wif": 187,
+    "pubKeyHash": 56,
+    "wif": 188,
     "client": {
       "token":"PHANTOM",
       "symbol":"Ẕ",
@@ -20,11 +20,11 @@
       "public": 70617039,
       "private": 70615956
     },
-    "pubKeyHash": 55,
-    "wif": 187,
+    "pubKeyHash": 56,
+    "wif": 188,
     "client": {
       "token":"TPHANTOM",
-      "symbol":"TѦ",
+      "symbol":"TẔ",
       "explorer":"https://texplorer.phantom.org"
     }
   },
@@ -34,22 +34,22 @@
       "public": 70617039,
       "private": 70615956
     },
-    "pubKeyHash": 55,
-    "wif": 187,
+    "pubKeyHash": 56,
+    "wif": 188,
     "client": {
       "token":"DPHANTOM",
       "symbol":"DẔ",
       "explorer":"https://texplorer.phantom.org"
     }
   },
-  "phantomTestnet": {
-    "messagePrefix": "PHANTOM Testnet message:\n",
+  "phantom_custom_testnet": {
+    "messagePrefix": "PHANTOM Custom Testnet message:\n",
     "bip32": {
       "public": 70617039,
       "private": 70615956
     },
-    "pubKeyHash": 55,
-    "wif": 187,
+    "pubKeyHash": 56,
+    "wif": 188,
     "client": {
       "token":"XNC",
       "symbol":"Ẕ",
