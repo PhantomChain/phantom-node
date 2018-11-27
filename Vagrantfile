@@ -73,7 +73,7 @@ Vagrant.configure("2") do |config|
     sudo -u postgres createdb -O $USER phantom_testnet
     sudo service postgresql start
 
-    git clone https://github.com/phantomecosystem/phantom-node.git
+    git clone https://github.com/PhantomChain/phantom-node.git
 
     cd /home/vagrant/phantom-node
     #rm -fr node_modules

@@ -4,7 +4,7 @@ process.env.SILENT='true';
 var node = {};
 var networkName = "testnet"
 var network = require('../networks.json')[networkName];
-node.phantom = require('./phantom-js');
+node.phantom = require('phantomjscore');
 node.phantom.crypto.setNetworkVersion(network.pubKeyHash);
 
 // Requires
@@ -28,13 +28,15 @@ require('colors');
 
 // Node configuration
 //node.baseUrl = 'http://' + node.config.address + ':' + node.config.port;
-node.baseUrl = 'http://localhost:' + node.config.port;
+node.baseUrl = 'http://0.0.0.0:' + node.config.port;
 node.api = node.supertest(node.baseUrl);
+
+console.log('====> ', node.baseUrl)
 
 node.normalizer = 100000000; // Use this to convert PHANTOM amount to normal value
 node.blockTime = 10000; // Block time in miliseconds
 node.blockTimePlus = 12000; // Block time + 2 seconds in miliseconds
-node.version = '0.0.0'; // Node version
+node.version = '2.0.0'; // Node version
 
 // Transaction fees
 node.fees = {
@@ -312,6 +314,7 @@ function abstractRequest (options, done) {
 
 	if (done) {
 		request.end(function (err, res) {
+			console.log(err)
 			node.debug('> Response:'.grey, JSON.stringify(res.body));
 			done(err, res);
 		});

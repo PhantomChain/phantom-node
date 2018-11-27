@@ -79,6 +79,7 @@ Install PostgreSQL (min version: 9.5.2)
 ```
 sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 sudo -u postgres createuser --createdb --password $USER
+createdb phantom_test
 ```
 
 Install Node.js (tested with version 6.9.2, but any recent LTS release should do):
@@ -97,8 +98,8 @@ sudo npm install grunt-cli -g
 
 Clone this repository
 ```
-git clone https://github.com/phantomcore/node.git
-cd node
+git clone https://github.com/PhantomChain/phantom-node.git
+cd phantom-node
 ```
 
 Install node modules:
@@ -161,7 +162,7 @@ Then you can distribute the config.json (without the delegates secrets inside, a
 
 
 ## Tests
-Load git submodule [phantom-js](https://github.com/phantomecosystem/phantom-js):
+Load git submodule [phantom-js](https://github.com/PhantomChain/phantom-js):
 ```
 git submodule init
 git submodule update

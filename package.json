@@ -46,6 +46,7 @@
     "rimraf": "=2.5.4",
     "socket.io": "=1.4.8",
     "strftime": "=0.9.2",
+    "supertest": "^3.3.0",
     "valid-url": "=1.0.9",
     "validator": "=5.7.0",
     "validator.js": "=2.0.3",
@@ -72,8 +73,7 @@
     "jsdox": "=0.4.10",
     "jshint": "^2.9.6",
     "mocha": "=3.1.0",
-    "moment": "=2.22.2",
-    "supertest": "=2.0.0"
+    "moment": "=2.22.2"
   },
   "config": {
     "blanket": {

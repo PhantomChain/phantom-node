@@ -4,7 +4,7 @@ var node = require('./../node.js');
 
 var genesisblock = require('../genesisBlock.json');
 
-describe('GET /peer/blocks', function () {
+describe.only('GET /peer/blocks', function () {
 
 	it('using valid headers should be ok', function (done) {
 		node.get('/peer/blocks')
