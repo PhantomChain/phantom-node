@@ -4,7 +4,7 @@ process.env.SILENT='true';
 var node = {};
 var networkName = "testnet"
 var network = require('../networks.json')[networkName];
-node.phantom = require('./phantom-js');
+node.phantom = require('phantomjscore');
 node.phantom.crypto.setNetworkVersion(network.pubKeyHash);
 
 // Requires
@@ -28,8 +28,10 @@ require('colors');
 
 // Node configuration
 //node.baseUrl = 'http://' + node.config.address + ':' + node.config.port;
-node.baseUrl = 'http://localhost:' + node.config.port;
+node.baseUrl = 'http://0.0.0.0:' + node.config.port;
 node.api = node.supertest(node.baseUrl);
+
+console.log('====> ', node.baseUrl)
 
 node.normalizer = 100000000; // Use this to convert PHANTOM amount to normal value
 node.blockTime = 10000; // Block time in miliseconds
