@@ -8,24 +8,23 @@ var ByteBuffer = require('bytebuffer');
 var bignum = require('../helpers/bignum.js');
 var ed = require('../helpers/ed.js');
 
-var accounts = require('../tasks/accounts.js').accounts;
-
-//var genesisVote = JSON.parse(fs.readFileSync('./tasks/genesisPassphrase.json'));
+var accounts = require('./private/accounts.js').accounts;
 
 var config = {
-    "port": 4000,
-    "address": "0.0.0.0",
-    "version": "0.2.1",
+    "port": 4100,
+    "address": "127.0.0.1",
+    "version": "1.0.0",
     "fileLogLevel": "info",
     "logFileName": "logs/phantom.log",
     "consoleLogLevel": "debug",
-    "trustProxy": false,
+	"trustProxy": false,
+	"minimumVersion": "1.0.0",
     "db": {
         "host": "localhost",
         "port": 5432,
         "database": "phantom_testnet",
-        "user": null,
-        "password": "password",
+        "user": "phantom",
+        "password": "123",
         "poolSize": 20,
         "poolIdleTimeout": 30000,
         "reapIntervalMillis": 1000,
@@ -49,7 +48,7 @@ var config = {
     },
     "peers": {
         "minimumNetworkReach":1,
-        "list": [{"ip":"127.0.0.1", "port":4000}],
+        "list": [{"ip":"127.0.0.1", "port":4100}],
         "blackList": [],
         "options": {
             "limits": {
@@ -206,7 +205,7 @@ create = function (data) {
 		previousBlock: null,
 		generatorPublicKey: data.keypair.publicKey.toString('hex'),
 		transactions: blockTransactions,
-    height:1
+    	height:1
 	};
 
   block.id=getId(block);
@@ -302,5 +301,5 @@ config.nethash = genesisBlock.payloadHash;
 
 fs.writeFile("./private/genesisBlock.testnet.json",JSON.stringify(genesisBlock, null, 2));
 fs.writeFile("./private/config.testnet.json",JSON.stringify(config, null, 2));
-//fs.writeFile("./private/delegatesPassphrases.testnet.json", JSON.stringify(delegates, null, 2));
-//fs.writeFile("./private/genesisPassphrase.testnet.json", JSON.stringify(genesis, null, 2));
+fs.writeFile("./private/delegatesPassphrases.testnet.json", JSON.stringify(delegates, null, 2));
+fs.writeFile("./private/genesisPassphrase.testnet.json", JSON.stringify(genesis, null, 2));
