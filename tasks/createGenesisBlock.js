@@ -10,7 +10,7 @@ var Crypto = require('../helpers/crypto.js');
 var networks = require('../networks.json');
 
 // network name that SHOULD already be preconfigured in ../networks.json
-var network_name = "phantomTestnet";
+var network_name = "phantom_custom_testnet";
 if(!networks[network_name]){
   console.log("WARNING: no configuration found in networks.json for '"+network_name+"'. Defaulting to 'devnet'");
   network_name = "devnet";
@@ -26,7 +26,7 @@ var output_dir = './demo';
 var default_port = 4100;
 
 // version of network to set in the config file
-var config_version = '0.0.1';
+var config_version = '0.2.2';
 
 // ips of your nodes in your network
 var seed_peers = [
@@ -66,7 +66,7 @@ else {
 }
 
 // Total of premined token in satoshi. The premined accounts will be substracted to this
-var totalpremine = 107041048800000000;
+var totalpremine = 107962617600000000;
 
 
 // config file that will be tuned and exported
@@ -79,11 +79,11 @@ var config = {
     consoleLogLevel: "debug",
     trustProxy: false,
     db: {
-        host: "phntm.ccyjhqamfwya.us-east-2.rds.amazonaws.com",
+        host: "localhost",
         port: 5432,
-        database: db_name,
-        user: "phntm",
-        password: "F2csrc986",
+        database: "phantom_testnet",
+        user: "phantom",
+        password: "123",
         poolSize: 20,
         poolIdleTimeout: 30000,
         reapIntervalMillis: 1000,
@@ -135,7 +135,7 @@ var config = {
         loadPerIteration: 5000
     },
     ssl: {
-        enabled: true,
+        enabled: false,
         options: {
             port: 4200,
             address: "0.0.0.0",
