@@ -77,6 +77,6 @@
       "cert": ""
     }
   },
-  "network": "phantomTestnet",
+  "network": "testnet",
   "nethash": "e62ee59508e610421d7d39567cca36479397fa3c63b1d2e9458e08dee9eb6481"
 }
