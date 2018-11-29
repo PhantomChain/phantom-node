@@ -10,7 +10,7 @@ var Crypto = require('../helpers/crypto.js');
 var networks = require('../networks.json');
 
 // network name that SHOULD already be preconfigured in ../networks.json
-var network_name = "phantom_custom_testnet";
+var network_name = "testnet";
 if(!networks[network_name]){
   console.log("WARNING: no configuration found in networks.json for '"+network_name+"'. Defaulting to 'devnet'");
   network_name = "devnet";
@@ -26,24 +26,12 @@ var output_dir = './demo';
 var default_port = 4100;
 
 // version of network to set in the config file
-var config_version = '0.2.2';
+var config_version = '2.0.0';
 
 // ips of your nodes in your network
 var seed_peers = [
-        {
+      {
         ip: "127.0.0.1",
-        port: 4100
-      },{
-        ip: "127.0.0.2",
-        port: 4100
-      },{
-        ip: "127.0.0.3",
-        port: 4100
-      },{
-        ip: "127.0.0.4",
-        port: 4100
-      },{
-        ip: "127.0.0.5",
         port: 4100
       }
 ];
@@ -371,14 +359,14 @@ if (!fs.existsSync(output_dir)) {
     fs.mkdirSync(output_dir);
 }
 
-fs.writeFile(output_dir+"/genesisBlock."+config.network+".json",JSON.stringify(genesisBlock, null, 2));
-fs.writeFile(output_dir+"/config."+config.network+".json",JSON.stringify(config, null, 2));
+fs.writeFile(output_dir+"/genesisBlock."+config.network+".json",JSON.stringify(genesisBlock, null, 2), function() {});
+fs.writeFile(output_dir+"/config."+config.network+".json",JSON.stringify(config, null, 2), function() {});
 
 // add delegates passphrases in config for testing on one single node
 for(var i=0;i<51;i++){
 	config.forging.secret.push(delegates[i].passphrase);
 }
-fs.writeFile(private_dir+"/config."+config.network+".autoforging.json", JSON.stringify(config, null, 2));
+fs.writeFile(private_dir+"/config."+config.network+".autoforging.json", JSON.stringify(config, null, 2), function() {});
 
 var forging = [];
 seed_peers.forEach(function(seed){
@@ -392,8 +380,8 @@ for(var i=0;i<51;i++){
 
 seed_peers.forEach(function(peer,index){
   config.forging.secret = forging[index];
-  fs.writeFile(private_dir+"/config."+config.network+"."+peer.ip+".json", JSON.stringify(config, null, 2));
+  fs.writeFile(private_dir+"/config."+config.network+"."+peer.ip+".json", JSON.stringify(config, null, 2), function() {});
 });
 
-fs.writeFile(private_dir+"/delegatesPassphrases."+config.network+".json", JSON.stringify(delegates, null, 2));
-fs.writeFile(private_dir+"/genesisPassphrase."+config.network+".json", JSON.stringify(genesis, null, 2));
+fs.writeFile(private_dir+"/delegatesPassphrases."+config.network+".json", JSON.stringify(delegates, null, 2), function() {});
+fs.writeFile(private_dir+"/genesisPassphrase."+config.network+".json", JSON.stringify(genesis, null, 2), function() {});

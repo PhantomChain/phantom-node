@@ -1,12 +1,11 @@
 {
   "port": 4100,
-  "address": "127.0.0.1",
-  "version": "0.0.1",
+  "address": "0.0.0.0",
+  "version": "2.0.0",
   "fileLogLevel": "info",
   "logFileName": "logs/phantom.log",
   "consoleLogLevel": "debug",
   "trustProxy": false,
-  "minimumVersion": "0.0.0",
   "db": {
     "host": "localhost",
     "port": 5432,
@@ -56,7 +55,7 @@
   },
   "forging": {
     "coldstart": 6,
-    "force": false,
+    "force": true,
     "secret": [],
     "access": {
       "whiteList": [
@@ -73,10 +72,10 @@
     "options": {
       "port": 4200,
       "address": "0.0.0.0",
-      "key": "",
-      "cert": ""
+      "key": "/var/node/ssl/wildcard.phantom.org.key",
+      "cert": "/var/node/ssl/wildcard.phantom.org.crt"
     }
   },
   "network": "testnet",
-  "nethash": "e62ee59508e610421d7d39567cca36479397fa3c63b1d2e9458e08dee9eb6481"
+  "nethash": "6869366d33d75b1f44687288d6ee8e824ed0cb5e979077a14bac6380f96ccae5"
 }

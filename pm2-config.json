@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name" : "phantom-testnet",
+      "script" : "npm",
+      "args": "run start:testnet"
+    }
+  ]
+}
+
